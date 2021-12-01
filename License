@@ -1,0 +1,73 @@
+----------------------------------------
+License
+----------------------------------------
+----------------------------------------
+First Work: The Kallipos standard Class (kalliposstd)
+----------------------------------------
+Created by A. Syropoylos
+
+Copyright © 2021, Hellenic Academic Libraries Link (HEAL-Link)  / ELKE 
+NTUA -KALLIPOS, Open Academic Editions
+
+National Technical University of Athens (NTUA)
+Zografou Campus
+9, Iroon Polytechniou str
+15780 Zografou
+www.kallipos.gr
+
+This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3 of this license or (at your option) any later version.
+
+The latest version of this license is in http://www.latex-project.org/lppl.txt
+and version 1.3 or later is part of all distributions of LaTeX version 2005/12/01 or later.
+
+This work has the LPPL maintenance status `maintained'.
+
+The Current Maintainer of this work is Apostolos Syropoulos.
+
+
+This work consists of the file : kalliposstd.cls
+
+
+------------------------------------------
+Second Work: XelatexGuide
+-------------------------------------------
+Created by Kallipos Technical Support Team (Editor: G. Papanikolaou).
+
+Copyright © 2021, Hellenic Academic Libraries Link (HEAL-Link)  / ELKE 
+NTUA -KALLIPOS, Open Academic Editions
+National  Technical University of Athens (NTUA)
+Zografou Campus
+9, Iroon Polytechniou str
+15780 Zografou
+www.kallipos.gr
+
+This work may be distributed and/or modified under the conditions of the Creative Commons Attribution-Non Commercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license.
+
+The latest version of this license is in  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+This work consists of all files listed below:
+KOY_master.tex
+acronyms.tex
+introduction.tex
+KOY_appendix_01.tex
+KOY_appendix_02.tex
+KOY_chapter_01.tex
+KOY_chapter_02.tex
+KOY_chapter_03.tex
+KOY_chapter_04.tex
+KOY_chapter_05.tex
+KOY_chapter_06.tex
+KOY_chapter_07.tex
+KOY_master.bib
+metadata.tex
+preface.tex 
+XelatexGuide.pdf
+
+As regards the files in the images directory, they are attributed inside the example book (XelatexGuide.pdf) where they are used.
+
+
+------------------------------------------
+This work was funded by:
+-------------------------------------------
+National Public Investment Program (PIP) of the Greek Government
+through the Ministry of Education, Research and Religious Affairs
