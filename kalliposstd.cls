@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Kallipos Standard LaTeX Class File %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Created by A. Syropoylos
+%% Created by Apostolos Syropoylos
 %%
-% Copyright © 2021, Hellenic Academic Libraries Link (HEAL-Link)  / ELKE 
+% Copyright © 2021-2022, Hellenic Academic Libraries Link (HEAL-Link)  / ELKE 
 % NTUA -KALLIPOS, Open Academic Editions
 % National Technical University of Athens (NTUA)
 % Zografou Campus
@@ -11,7 +11,8 @@
 % 15780 Zografou
 % www.kallipos.gr
 %
-% This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3 of this % license or (at your option) any later version.
+% This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, 
+% either version 1.3 of this % license or (at your option) any later version.
 %
 % The latest version of this license is in http://www.latex-project.org/lppl.txt
 % and version 1.3 or later is part of all distributions of LaTeX version 2005/12/01 or later.
@@ -21,7 +22,7 @@
 %The Current Maintainer of this work is Apostolos Syropoulos.
 %
 %This work consists of the file : kalliposstd.cls
-%
+%Current version 0.9 - Date: 15/4/2022
 % ------------------------------------------
 %This work was funded by:
 % -------------------------------------------
@@ -29,7 +30,7 @@
 % through the Ministry of Education, Research and Religious Affairs
 %-----------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{kalliposstd}[2021/11/05 kallipos LaTeX class]
+\ProvidesClass{kalliposstd}[2022/04/11 kallipos LaTeX class]
 \newif\ifcustombook
 \custombookfalse
 \newif\ifdraft
@@ -50,7 +51,7 @@
 \LoadClass[twoside,12pt]{book}
 %%%% Load Basic Packages
 \RequirePackage{xltxtra}
-\RequirePackage[nonumeralsign]{xgreek}
+\RequirePackage[nonumeralsign,noindentfirst]{xgreek}
 %%%
 %%% Hyphenation
 %%%
@@ -121,7 +122,7 @@
             {\raggedright\chaptertitlefont\MakeUppercase{#1}\vskip1pc\hrule height 1pt}
 \titleformat{name=\chapter,numberless}[display]
             {\chapternumberfont}
-            {\vrule depth12pt width0pt\hrule height3pt}
+            {}
             {\ifcustombook 3.5pc\else 7.5pc\fi}
             {\raggedright\chaptertitlefont\MakeUppercase{#1}\vskip1pc\hrule height 1pt}
 \titlespacing*{\part}{0pt}{20pt}{0pt}
@@ -299,8 +300,9 @@
             {}%  odd-left
             {}%  odd-center
             {}%  odd-right
-    \setfoot[][][]{\footnotesize\begin{tabular}{l}\@primaryauthor\, «\href{\@pdfdoi}{\@mypdftitle}»\\
-                   Copyright© \@pdfyear, ΣΕΑΒ/ΕΛΚΕ ΕΜΠ - ΚΑΛΛΙΠΟΣ, ΑΝΟΙΚΤΕΣ ΑΚΑΔΗΜΑΪΚΕΣ ΕΚΔΟΣΕΙΣ\\
+    \setfoot[][][]{\footnotesize\begin{tabular}{l}\@mypdfauthor\, (\@pdfyear). «\href{\@pdfdoi}{\@mypdftitle}». 
+    \\Αθήνα: Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. \href{\@pdfdoi}{\@pdfdoi}\\
+                   \ifcustombook\scriptsize\fi
                    \ifnonderivative\raisebox{-.2\height}{\includegraphics[scale=0.8]{logos/by-nc-nd-small.pdf}}\
                     Creative Commons Αναφορά Δημιουργού - Μη Εμπορική Χρήση - Όχι Παράγωγα Έργα 4.0\else%
                     \raisebox{-.2\height}{\includegraphics[scale=0.8]{logos/by-nc-sa-small.pdf}}\
@@ -357,7 +359,8 @@
    \vspace{\stretch{1}}
    \begin{flushleft}
    \begin{tabular} {p{0.20\linewidth} p{0.65\linewidth}}
-\raisebox{-.6\totalheight}{\includegraphics[scale=0.6]{logos/Kallipos-logo-gr-b-w.pdf}}  &    {\Large\bfseries ΚΑΛΛΙΠΟΣ \newline ΑΝΟΙΚΤΕΣ ΑΚΑΔΗΜΑΪΚΕΣ ΕΚΔΟΣΕΙΣ} \newline \url{www.kallipos.gr} \\
+    \raisebox{-.6\totalheight}{\includegraphics[scale=0.6]{logos/Kallipos-logo-gr-b-w.pdf}}  &    
+    {\Large\bfseries ΚΑΛΛΙΠΟΣ \newline ΑΝΟΙΚΤΕΣ ΑΚΑΔΗΜΑΪΚΕΣ ΕΚΔΟΣΕΙΣ} \newline \url{www.kallipos.gr} \\
    \end{tabular}
    \end{flushleft}
    \null
@@ -378,15 +381,15 @@
 \NewDocumentCommand\copyrightpage{m m m m}{%
    \vspace*{10cm}
 
-   \noindent{Τίτλος πρωτοτύπου: <<\em\@mypdftitle>>}\\
-   \noindent\textbf{Copyright\ ©\ \@pdfyear, ΣΕΑΒ/ ΕΛΚΕ ΕΜΠ - ΚΑΛΛΙΠΟΣ, ΑΝΟΙΚΤΕΣ  ΑΚΑΔΗΜΑΪΚΕΣ ΕΚΔΟΣΕΙΣ}
+   \noindent{Τίτλος πρωτοτύπου: «\em\@mypdftitle»}\\
+   \noindent\textbf{Copyright\ ©\ \@pdfyear, ΚΑΛΛΙΠΟΣ, ΑΝΟΙΚΤΕΣ  ΑΚΑΔΗΜΑΪΚΕΣ ΕΚΔΟΣΕΙΣ}
 
    \ifnonderivative%
    \noindent\includegraphics[scale=1]{logos/by-nc-nd.eu.pdf}
 
    \noindent Το παρόν έργο αδειοδοτείται υπό τους όρους της άδειας Creative Commons Αναφορά Δημιουργού – Μη Εμπορική
     Χρήση – Όχι Παράγωγα Έργα 4.0. Για να δείτε ένα αντίγραφο της άδειας αυτής επισκεφτείτε τον ιστότοπο\\
-    \url{https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.el}\\
+    {\ifcustombook\small\fi\url{https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.el}}\\
      Αν τυχόν κάποιο τμήμα του έργου διατίθεται με διαφορετικό καθεστώς αδειοδότησης, αυτό αναφέρεται ρητά και ειδικώς
      στην οικεία θέση
    \else%
@@ -394,7 +397,7 @@
 
    \noindent Το παρόν έργο διατίθεται με τους όρους της άδειας Creative Commons Αναφορά Δημιουργού – Μη Εμπορική Χρήση –
    Παρόμοια Διανομή 4.0. Για να δείτε τους όρους της άδειας αυτής επισκεφτείτε τον ιστότοπο\\
-   \url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.el}\\
+   {\ifcustombook\small\fi\url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.el}}\\
     Αν τυχόν κάποιο τμήμα του έργου διατίθεται με διαφορετικό καθεστώς αδειοδότησης, αυτό αναφέρεται ρητά και ειδικώς
     στην οικεία θέση.
    \fi
@@ -410,7 +413,7 @@
      Ηρώων Πολυτεχνείου 9\\[4pt]
      15780 Ζωγράφου\\[4pt]
      \url{www.kallipos.gr}\\[7pt]
- Βιβλιογραφική αναφορά: & {\@mypdfauthor, \@pdfyear. \textit{\@mypdftitle}. Αθήνα: Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις}\\
+ Βιβλιογραφική αναφορά: & {\@mypdfauthor, (\@pdfyear). \textit{\@mypdftitle}. Αθήνα: Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις}\\
      Διαθέσιμο στο: & {\href{\@pdfdoi}{\@pdfdoi}}\\[5pt]
      \textbf{ISBN}: & \textbf{#4}
     \end{tabular}
