@@ -58,10 +58,42 @@
 
 \begin{document}
 %---------Γραμματοσειρές ----------------------
-\setmonofont[Scale=MatchLowercase]{Consolas}
-\setmainfont[Mapping=tex-text,Ligatures=Common]{Arno Pro}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Arimo}
+%\setmonofont[Scale=MatchLowercase]{Consolas}
+%\setmainfont[Mapping=tex-text,Ligatures=Common]{Arno Pro}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Arimo}
 \setmathfont[Scale=MatchUppercase]{Asana Math}
+
+\setmonofont{Consolas}[
+    Path=./fonts/consolas/,
+    Scale=MatchLowercase,
+    Extension = .ttf,
+      %
+    ]
+
+\setmainfont{ArnoPro}[
+Mapping=tex-text,Ligatures=Common,
+    Path=./fonts/arno-pro/,
+    Extension = .otf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic,
+    %
+    ]
+
+\setsansfont{Arimo}[
+    Path=./fonts/arimo/,
+    Scale=MatchLowercase,
+    Mapping=tex-text,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic,
+    %
+    ]
+
+
 
 %---------Τίτλοι βιβλίου / Μεταδεδομένα ----------------------
 
